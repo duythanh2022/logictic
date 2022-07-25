@@ -3,7 +3,9 @@ import React from 'react'
 const Footer = ()=>{
     return(
         <>
+        <div className='wrapper-footer'>
         <h1>Footer</h1>
+        </div>
         </>
     )
 }

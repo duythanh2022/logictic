@@ -1,27 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "@/layouts/components/Header";
-import Children from '@/routes/routes'
-const Layout = () => {
-  return (
+import Footer from "@/layouts/components/Footer";
+const Layout = ({chilrdren})=>{
+  return(
     <>
-      <Router>
-        <Routes>
-        <Route
-          render={(props) => (
-            <>
-              <Header {...props} />
-              <div className="container">
-                    <div className="main">
-                        <Children />
-                    </div>
-              </div>
-            </>
-          )}
-        ></Route>
-        </Routes>
-      </Router>
+    <div className="wrapper">
+      <Header />
+      <div className="container">
+          {chilrdren}
+      </div>
+      <Footer />
+
+    </div>
     </>
-  );
-};
-export default Layout;
+  )
+}
+export default Layout
